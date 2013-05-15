@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Get your short stuff!</h1>
+  <p>Put in your URL below and receive a shortened version!</p>
+  <% if @errors %>
+  <% @errors.each do |error| %>
+    <p><%= error %></p>
+    <% end %>
+  <% end %> 
+  <form method="post" action="/urls">
+    <input type="text" name="long_url" placeholder="http://www.YourLink.com">
+    <input type="submit" value="shorten!">
+  </form> 
+
+</div>
